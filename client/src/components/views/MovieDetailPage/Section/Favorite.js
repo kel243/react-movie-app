@@ -30,7 +30,7 @@ function Favorite(props) {
         alert("Failed to get favorite info");
       }
     });
-  }, []);
+  }, [variable]);
 
   const onClickFavorite = () => {
     if (Favorited) {

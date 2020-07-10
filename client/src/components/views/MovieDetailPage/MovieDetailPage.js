@@ -25,7 +25,7 @@ function MovieDetailPage(props) {
             setCast(response.cast);
           });
       });
-  }, []);
+  }, [movieId]);
 
   const handleClick = () => {
     setActorToggle(!ActorToggle);
