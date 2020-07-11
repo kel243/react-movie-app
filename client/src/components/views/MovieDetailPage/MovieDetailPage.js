@@ -16,7 +16,6 @@ function MovieDetailPage(props) {
     fetch(`${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         setMovie(response);
 
         fetch(`${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`)
