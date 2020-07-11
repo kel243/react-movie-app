@@ -15,7 +15,6 @@ function FavoritePage() {
   const fetchFavoritedMovie = () => {
     Axios.get("/api/favorite/getFavoritedMovie", variable).then((response) => {
       if (response.data.success) {
-        console.log(response.data.favorites);
         setFavorites(response.data.favorites);
       } else {
         alert("Failed to get favorited movies");

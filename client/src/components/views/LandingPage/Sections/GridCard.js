@@ -3,9 +3,13 @@ import { Col } from "antd";
 function GridCard(props) {
   if (props.actor) {
     return (
-      <Col lg={4} md={8} xd={16}>
+      <Col lg={6} md={12} xd={16}>
         <div style={{ position: "relative" }}>
-          <img style={{ width: "100%" }} alt="Actor" src={props.image}></img>
+          <img
+            style={{ width: "100%", height: "20vw", minHeight: "500px" }}
+            alt="Actor"
+            src={props.image}
+          ></img>
         </div>
       </Col>
     );
