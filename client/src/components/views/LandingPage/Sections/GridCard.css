@@ -1,0 +1,8 @@
+.posters {
+  border: 2px solid transparent;
+  transition: 0.3s all ease;
+}
+
+.posters:hover {
+  border: 2px solid #18a3ff;
+}

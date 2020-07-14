@@ -13,6 +13,7 @@ function MainImage(props) {
           backgroundSize: "cover",
           width: "100%",
           position: "relative",
+          backgroundPosition: "center",
         }}
       >
         <div

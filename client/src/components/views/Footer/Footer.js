@@ -10,6 +10,8 @@ function Footer() {
         alignItems: "center",
         justifyContent: "center",
         fontSize: "1rem",
+        backgroundColor: "#18a3ff",
+        color: "white",
       }}
     >
       <p>Movie App</p>

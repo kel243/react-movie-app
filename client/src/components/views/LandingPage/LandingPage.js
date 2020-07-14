@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { API_URL, API_KEY, IMAGE_URL } from "../../Config";
-import { Typography, Row } from "antd";
+import { Typography } from "antd";
 import MainImage from "./Sections/MainImage";
 import GridCard from "./Sections/GridCard";
+import "../SearchPage/SearchPage.css";
 
 const { Title } = Typography;
 function LandingPage() {
@@ -41,25 +42,40 @@ function LandingPage() {
       )}
 
       <div style={{ width: "90%", margin: "1rem auto" }}>
-        <Title level={2}>Latest Movies</Title>
+        <Title level={2}>Popular Movies</Title>
         <hr></hr>
-        <Row gutter={[8, 8]}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+            gridGap: "10px",
+            gridRowGap: "20px",
+            gridAutoRows: "auto",
+            width: "100%",
+            justifyItems: "center",
+            marginTop: "20px",
+          }}
+        >
           {Movies &&
-            Movies.map((movie, index) => (
-              <React.Fragment key={index}>
-                <GridCard
-                  image={
-                    movie.poster_path && `${IMAGE_URL}w500${movie.poster_path}`
-                  }
-                  movieId={movie.id}
-                />
-              </React.Fragment>
-            ))}
-        </Row>
+            Movies.map((movie, index) => {
+              if (movie.poster_path) {
+                return (
+                  <React.Fragment key={index}>
+                    <GridCard
+                      image={`${IMAGE_URL}w500${movie.poster_path}`}
+                      movieId={movie.id}
+                    />
+                  </React.Fragment>
+                );
+              }
+            })}
+        </div>
 
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <button onClick={handleClick}>Load More</button>
+          <button className="btn" onClick={handleClick}>
+            Load More
+          </button>
         </div>
       </div>
     </div>

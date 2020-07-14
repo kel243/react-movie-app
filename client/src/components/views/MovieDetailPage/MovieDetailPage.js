@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { API_URL, API_KEY, IMAGE_URL } from "../../Config";
 import MainImage from "../LandingPage/Sections/MainImage";
-import { Descriptions, Button, Row } from "antd";
+import { Descriptions, Button } from "antd";
 import GridCard from "../LandingPage/Sections/GridCard";
 import Favorite from "./Section/Favorite";
 
@@ -74,7 +74,16 @@ function MovieDetailPage(props) {
         </div>
         <br />
         {ActorToggle && (
-          <Row gutter={[8, 8]} align="middle">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+              gridGap: "10px",
+              gridAutoRows: "auto",
+              width: "100%",
+              justifyItems: "center",
+            }}
+          >
             {Cast &&
               Cast.map((cast, index) => (
                 <React.Fragment key={index}>
@@ -82,11 +91,12 @@ function MovieDetailPage(props) {
                     <GridCard
                       actor
                       image={`${IMAGE_URL}w500${cast.profile_path}`}
+                      name={cast.name}
                     />
                   )}
                 </React.Fragment>
               ))}
-          </Row>
+          </div>
         )}
       </div>
     </div>
