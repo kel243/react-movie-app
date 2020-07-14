@@ -14,3 +14,13 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.favLinks {
+  text-decoration: none;
+  color: #595959;
+  transition: all 0.3s ease;
+}
+
+.favLinks:hover {
+  color: #18b5ff;
+}

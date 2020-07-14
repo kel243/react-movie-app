@@ -56,7 +56,11 @@ function FavoritePage() {
     return (
       <tr key={index}>
         <Popover content={content} title={`${favorite.movieTitle}`}>
-          <td>{favorite.movieTitle}</td>
+          <td>
+            <a href={favorite.movieId} className="favLinks">
+              {favorite.movieTitle}
+            </a>
+          </td>
         </Popover>
 
         <td>{favorite.movieRunTime} mins</td>
