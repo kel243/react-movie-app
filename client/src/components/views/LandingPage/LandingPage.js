@@ -10,6 +10,8 @@ function LandingPage() {
   const [Movies, setMovies] = useState([]);
   const [CurrentPage, setCurrentPage] = useState(0);
 
+  console.log(API_KEY);
+
   useEffect(() => {
     const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     fetchMovies(endpoint);
