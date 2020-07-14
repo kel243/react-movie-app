@@ -57,7 +57,7 @@ function FavoritePage() {
       <tr key={index}>
         <Popover content={content} title={`${favorite.movieTitle}`}>
           <td>
-            <a href={favorite.movieId} className="favLinks">
+            <a href={`/movie/${favorite.movieId}`} className="favLinks">
               {favorite.movieTitle}
             </a>
           </td>
