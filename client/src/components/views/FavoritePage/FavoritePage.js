@@ -10,7 +10,7 @@ function FavoritePage() {
 
   useEffect(() => {
     fetchFavoritedMovie();
-  }, []);
+  });
 
   const fetchFavoritedMovie = () => {
     Axios.get("/api/favorite/getFavoritedMovie", variable).then((response) => {
