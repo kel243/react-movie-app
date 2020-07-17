@@ -20,7 +20,7 @@ function SearchPage() {
   useEffect(() => {
     const endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=1`;
     if (query) fetchMovies(endpoint);
-  });
+  }, []);
 
   const fetchMovies = (path) => {
     fetch(path)
