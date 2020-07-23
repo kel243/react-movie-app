@@ -17,7 +17,7 @@ tr:nth-child(even) {
 
 .favLinks {
   text-decoration: none;
-  color: #595959;
+  color: white;
   transition: all 0.3s ease;
 }
 

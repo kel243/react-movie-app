@@ -66,7 +66,7 @@ function FavoritePage() {
         <td style={{ color: "white" }}>{favorite.movieRunTime} mins</td>
         <td>
           <button
-            style={{ color: "white" }}
+            style={{ color: "black" }}
             onClick={() => onClickDelete(favorite.movieId, favorite.userFrom)}
           >
             {" "}
