@@ -10,7 +10,7 @@ function Footer() {
         alignItems: "center",
         justifyContent: "center",
         fontSize: "1rem",
-        backgroundColor: "#18a3ff",
+        backgroundColor: "#000000",
         color: "white",
       }}
     >

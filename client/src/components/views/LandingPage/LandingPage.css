@@ -1,0 +1,11 @@
+.landing-page {
+  width: 100%;
+  margin: 0;
+  background-color: #141526;
+  padding-bottom: 20px;
+}
+
+.movie-header {
+  color: white;
+  font-size: 30px;
+}

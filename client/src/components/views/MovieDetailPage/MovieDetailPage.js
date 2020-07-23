@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { API_URL, API_KEY, IMAGE_URL } from "../../Config";
 import MainImage from "../LandingPage/Sections/MainImage";
-import { Descriptions, Button } from "antd";
+import { Descriptions } from "antd";
 import GridCard from "../LandingPage/Sections/GridCard";
 import Favorite from "./Section/Favorite";
+import "../SearchPage/SearchPage.css";
 
 function MovieDetailPage(props) {
   const [Movie, setMovie] = useState([]);
@@ -40,7 +41,13 @@ function MovieDetailPage(props) {
         />
       )}
 
-      <div style={{ width: "90%", margin: "1rem auto" }}>
+      <div
+        style={{
+          width: "100%",
+          margin: "0 auto",
+          padding: "2rem 3rem",
+        }}
+      >
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Favorite
             userFrom={localStorage.getItem("userId")}
@@ -70,7 +77,9 @@ function MovieDetailPage(props) {
         </Descriptions>
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <Button onClick={handleClick}>Toggle Actors View</Button>
+          <button className="btn" onClick={handleClick}>
+            Toggle Actors View
+          </button>
         </div>
         <br />
         {ActorToggle && (

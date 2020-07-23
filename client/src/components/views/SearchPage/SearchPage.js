@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { API_URL, API_KEY, IMAGE_URL } from "../../Config";
 import GridCard from "../LandingPage/Sections/GridCard";
-import { Typography } from "antd";
 import "./SearchPage.css";
-
-const { Title } = Typography;
 
 function SearchPage() {
   const [Movies, setMovies] = useState([]);
@@ -40,30 +37,26 @@ function SearchPage() {
   };
 
   return (
-    <div style={{ width: "90%", margin: "1rem auto" }}>
+    <div
+      style={{
+        width: "90%",
+        margin: "0 auto",
+        padding: "3rem 0",
+        backgroundColor: "#141526",
+      }}
+    >
       <form style={{ textAlign: "center" }}>
         <input
           type="text"
           name="query"
+          className="search-input"
           placeholder="Search Movie Titles"
-          style={{
-            width: "90vw",
-            maxWidth: "800px",
-            height: "50px",
-            fontSize: "25px",
-            display: "block",
-            margin: "20px auto",
-            padding: "3px 5px",
-            boxShadow: "none",
-            border: "1px solid grey",
-            borderRadius: "3px",
-          }}
         ></input>
         <button className="btn" type="submit">
           Search
         </button>
       </form>
-      <Title level={2}>Results</Title>
+      <h2 className="search-header">Results</h2>
       <hr></hr>
       <div
         style={{

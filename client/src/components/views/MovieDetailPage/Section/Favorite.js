@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "antd";
 import Axios from "axios";
+import "../../SearchPage/SearchPage.css";
 
 function Favorite(props) {
   const [FavoriteNumber, setFavoriteNumber] = useState(0);
@@ -58,10 +58,10 @@ function Favorite(props) {
 
   return (
     <div>
-      <Button onClick={onClickFavorite}>
+      <button className="btn" onClick={onClickFavorite}>
         {Favorited ? "Remove from Favorite" : "Add to Favorite"}{" "}
         {FavoriteNumber}
-      </Button>
+      </button>
     </div>
   );
 }

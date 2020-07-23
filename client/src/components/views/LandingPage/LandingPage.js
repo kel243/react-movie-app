@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { API_URL, API_KEY, IMAGE_URL } from "../../Config";
-import { Typography } from "antd";
 import MainImage from "./Sections/MainImage";
 import GridCard from "./Sections/GridCard";
 import "../SearchPage/SearchPage.css";
+import "./LandingPage.css";
 
-const { Title } = Typography;
 function LandingPage() {
   const [Movies, setMovies] = useState([]);
   const [CurrentPage, setCurrentPage] = useState(0);
@@ -32,7 +31,7 @@ function LandingPage() {
   };
 
   return (
-    <div style={{ width: "100%", margin: 0 }}>
+    <div className="landing-page">
       {Movies[0] && (
         <MainImage
           image={`${IMAGE_URL}w1280${Movies[0].backdrop_path}`}
@@ -42,7 +41,7 @@ function LandingPage() {
       )}
 
       <div style={{ width: "90%", margin: "1rem auto" }}>
-        <Title level={2}>Popular Movies</Title>
+        <h2 className="movie-header">Popular Movies</h2>
         <hr></hr>
         <div
           style={{

@@ -11,7 +11,7 @@ function GridCard(props) {
             alt="Actor"
             src={props.image}
           ></img>
-          <p style={{ color: "black", fontSize: "1.1rem" }}>{props.name}</p>
+          <p style={{ color: "white", fontSize: "1.1rem" }}>{props.name}</p>
         </div>
       </div>
     );

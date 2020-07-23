@@ -4,6 +4,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { registerUser } from "../../../_actions/user_actions";
 import { useDispatch } from "react-redux";
+import "./RegisterPage.css";
 
 import { Form, Input, Button } from "antd";
 
@@ -90,13 +91,13 @@ function RegisterPage(props) {
         } = props;
         return (
           <div className="app">
-            <h2>Sign up</h2>
+            <h2 style={{ color: "white", fontSize: "30px" }}>Sign up</h2>
             <Form
               style={{ minWidth: "375px" }}
               {...formItemLayout}
               onSubmit={handleSubmit}
             >
-              <Form.Item required label="Name">
+              <Form.Item required label="First Name">
                 <Input
                   id="name"
                   placeholder="Enter your first name"

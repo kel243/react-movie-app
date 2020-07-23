@@ -1,13 +1,47 @@
 .btn {
-  border: 1px solid grey;
-  background-color: #f1f1f1;
+  border: 2px solid #6afff3;
+  background-color: #141526;
   cursor: pointer;
   font-size: 1.2rem;
   transition: 0.2s all ease;
   border-radius: 3px;
+  color: #6afff3;
 }
 
 .btn:hover {
   color: #18a3ff;
-  background-color: white;
+  border: 2px solid #18a3ff;
+}
+
+.search-header {
+  color: white;
+  font-size: 30px;
+}
+
+.search-input {
+  width: 90vw;
+  max-width: 800px;
+  height: 50px;
+  font-size: 25px;
+  display: block;
+  margin: 20px auto;
+  padding: 3px 5px;
+  box-shadow: none;
+  border: 1px solid #6afff3;
+  background-color: transparent;
+  border-radius: 3px;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border: 1px solid #18a3ff;
+}
+
+.ant-descriptions-item-content {
+  color: white !important;
+}
+
+tr:nth-child(2n) {
+  background-color: transparent !important;
 }

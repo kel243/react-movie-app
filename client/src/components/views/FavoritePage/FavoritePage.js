@@ -63,9 +63,10 @@ function FavoritePage() {
           </td>
         </Popover>
 
-        <td>{favorite.movieRunTime} mins</td>
+        <td style={{ color: "white" }}>{favorite.movieRunTime} mins</td>
         <td>
           <button
+            style={{ color: "white" }}
             onClick={() => onClickDelete(favorite.movieId, favorite.userFrom)}
           >
             {" "}
@@ -78,14 +79,14 @@ function FavoritePage() {
 
   return (
     <div style={{ width: "90%", margin: "3rem auto" }}>
-      <h3>My Favorite Movies</h3>
+      <h3 style={{ color: "white", fontSize: "25px" }}>My Favorite Movies</h3>
       <hr />
       <table>
         <thead>
           <tr>
-            <th>Movie Title</th>
-            <th>Movie Runtime</th>
-            <th>Remove from favorites</th>
+            <th style={{ color: "white" }}>Movie Title</th>
+            <th style={{ color: "white" }}>Movie Runtime</th>
+            <th style={{ color: "white" }}>Remove from favorites</th>
           </tr>
         </thead>
         <tbody>{renderTableBody}</tbody>

@@ -3,10 +3,8 @@ import { withRouter } from "react-router-dom";
 import { loginUser } from "../../../_actions/user_actions";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { Form, Icon, Input, Button, Checkbox, Typography } from "antd";
+import { Form, Icon, Input, Button, Checkbox } from "antd";
 import { useDispatch } from "react-redux";
-
-const { Title } = Typography;
 
 function LoginPage(props) {
   const dispatch = useDispatch();
@@ -82,7 +80,7 @@ function LoginPage(props) {
         } = props;
         return (
           <div className="app">
-            <Title level={2}>Log In</Title>
+            <h2 style={{ color: "white", fontSize: "30px" }}>Log In</h2>
             <form onSubmit={handleSubmit} style={{ width: "350px" }}>
               <Form.Item required>
                 <Input
@@ -149,7 +147,7 @@ function LoginPage(props) {
                   onChange={handleRememberMe}
                   checked={rememberMe}
                 >
-                  Remember me
+                  <span style={{ color: "white" }}>Remember me</span>
                 </Checkbox>
                 <a
                   className="login-form-forgot"
