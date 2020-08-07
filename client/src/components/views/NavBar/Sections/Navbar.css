@@ -44,6 +44,24 @@
   float: right;
 }
 
+.menu__container button {
+  background-color: #141526;
+  border: 1px solid #6afff3;
+}
+
+.menu__container button:hover {
+  background-color: #141526;
+  border: 1px solid #3e91f7;
+}
+
+.menu__container svg {
+  fill: #6afff3;
+}
+
+.menu__container svg:hover {
+  fill: #3e91f7;
+}
+
 .menu__mobile-button {
   float: right;
   height: 32px;
@@ -51,6 +69,15 @@
   margin-top: 8px;
   display: none !important; /* use of important to overwrite ant-btn */
   background: #3e91f7;
+}
+
+.menu_drawer ul,
+.menu_drawer div div {
+  background-color: #141526;
+}
+
+.menu_drawer ul {
+  padding-top: 5px;
 }
 
 .menu_drawer .ant-drawer-body {
