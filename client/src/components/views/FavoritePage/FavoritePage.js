@@ -3,6 +3,7 @@ import "./favorite.css";
 import Axios from "axios";
 import { Popover } from "antd";
 import { IMAGE_URL } from "../../Config";
+import "../SearchPage/SearchPage.css";
 
 function FavoritePage() {
   const variable = { userFrom: localStorage.getItem("userId") };
@@ -66,7 +67,7 @@ function FavoritePage() {
         <td style={{ color: "white" }}>{favorite.movieRunTime} mins</td>
         <td>
           <button
-            style={{ color: "black" }}
+            class="btn"
             onClick={() => onClickDelete(favorite.movieId, favorite.userFrom)}
           >
             {" "}
