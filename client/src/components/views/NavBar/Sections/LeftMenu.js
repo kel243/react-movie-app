@@ -1,17 +1,24 @@
 import React from "react";
 import { Menu } from "antd";
+import "./Navbar.css";
 
 function LeftMenu(props) {
   return (
     <Menu mode={props.mode}>
       <Menu.Item key="mail">
-        <a href="/">Home</a>
+        <a class="nav-links" href="/">
+          Home
+        </a>
       </Menu.Item>
       <Menu.Item key="favorite">
-        <a href="/favorite">Favorite</a>
+        <a class="nav-links" href="/favorite">
+          Favorite
+        </a>
       </Menu.Item>
       <Menu.Item key="search">
-        <a href="/search">Search</a>
+        <a class="nav-links" href="/search">
+          Search
+        </a>
       </Menu.Item>
     </Menu>
   );

@@ -6,6 +6,7 @@
   transition: 0.2s all ease;
   border-radius: 3px;
   color: #6afff3;
+  padding: 0 5px;
 }
 
 .btn:hover {

@@ -5,7 +5,7 @@ function GridCard(props) {
   if (props.actor) {
     return (
       <div style={{ width: "90vw", maxWidth: "300px" }}>
-        <div style={{ position: "relative" }}>
+        <div className="posters" style={{ position: "relative" }}>
           <img
             style={{ width: "100%", height: "auto" }}
             alt="Actor"

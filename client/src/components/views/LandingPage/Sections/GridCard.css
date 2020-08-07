@@ -1,5 +1,7 @@
 .posters {
   transition: 0.3s all ease;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .posters:hover {
