@@ -12,7 +12,7 @@ function LeftMenu(props) {
       </Menu.Item>
       <Menu.Item key="favorite">
         <a class="nav-links" href="/favorite">
-          Favorite
+          Favorites
         </a>
       </Menu.Item>
       <Menu.Item key="search">
