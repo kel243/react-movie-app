@@ -35,9 +35,9 @@ function App() {
             path="/movie/:movieId"
             component={Auth(MovieDetailPage, null)}
           />
+          <Route exact path="/favorite" component={Auth(FavoritePage, null)} />
+          <Route exact path="/search" component={Auth(SearchPage, null)} />
         </Switch>
-        <Route exact path="/favorite" component={Auth(FavoritePage, null)} />
-        <Route exact path="/search" component={Auth(SearchPage, null)} />
       </div>
       <Footer />
     </Suspense>
